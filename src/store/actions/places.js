@@ -1,4 +1,5 @@
-import { ADD_PLACE, DELETE_PLACE, DELETE_PLACE_MODAL, SELECT_PLACE, DESELECT_PLACE } from "./actionTypes";
+import { ADD_PLACE, DELETE_PLACE, DELETE_PLACE_SCREEN, SELECT_PLACE, DESELECT_PLACE } from "./actionTypes";
+import { bindActionCreators } from "redux";
 
 
 export const addPlace = (placeName) => {
@@ -15,9 +16,10 @@ export const deletePlace = (key) => {
   };
 };
 
-export const deletePlaceModal = () => {
+export const deletePlaceScreen = (key) => {
   return {
-    type: DELETE_PLACE_MODAL
+    type: DELETE_PLACE_SCREEN,
+    placeKey: bindActionCreators.placeKey
   };
 };
 

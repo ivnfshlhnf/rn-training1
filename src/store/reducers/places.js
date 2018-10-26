@@ -1,4 +1,4 @@
-import { ADD_PLACE, DELETE_PLACE, DELETE_PLACE_MODAL, SELECT_PLACE, DESELECT_PLACE } from "../actions/actionTypes";
+import { ADD_PLACE, DELETE_PLACE, DELETE_PLACE_SCREEN, SELECT_PLACE, DESELECT_PLACE } from "../actions/actionTypes";
 
 
 const initialState = {
@@ -27,11 +27,11 @@ const placesReducer = (state = initialState, action) => {
         }),
         selectedPlace: null
       };
-    case DELETE_PLACE_MODAL:
+    case DELETE_PLACE_SCREEN:
       return {
         ...state,
         places: state.places.filter(place => {
-          return place.key !== state.selectedPlace.key;
+          return place.key !== action.placeKey;
         }),
         selectedPlace: null
       };

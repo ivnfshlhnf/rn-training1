@@ -1,1 +1,1 @@
-export {addPlace, deletePlace, deletePlaceModal, selectPlace, deselectPlace} from './places';
+export {addPlace, deletePlace, deletePlaceScreen, selectPlace, deselectPlace} from './places';

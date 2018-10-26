@@ -22,7 +22,8 @@ const placeList = props => {
 
 const styles = StyleSheet.create ({
   listContainer: {
-    width: "100%"
+    width: "100%",
+    padding: "20"
   }
 })
 
